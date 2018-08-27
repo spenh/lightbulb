@@ -1,0 +1,17 @@
+---
+- hosts: web
+  name: Uninstall the apache web service
+  become: true
+  gather_facts: false
+
+  tasks:
+
+  - name: stop httpd
+    service:
+      name: httpd
+      state: stopped
+
+  - name: uninstall apache
+    yum:
+      name: httpd
+      state: absent
