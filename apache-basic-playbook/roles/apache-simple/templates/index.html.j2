@@ -32,7 +32,8 @@ img {
 <div class="container">
     <img src="https://www.ansible.com/hubfs/2016_Images/Assets/Ansible-Tower-Logotype-Small-RGB-FullBlack.png"/>
     <p>{{ apache_test_message }}</p>
+		<p>Running on {{ ansible_distribution_file_search_string }} {{ ansible_distribution_version }} ({{ ansible_distribution_release }})</p>
 </div>
-<footer>{{ inventory_hostname }}<br />Ansible by Red Hat</footer>
+<footer>{{ inventory_hostname }}<br />Ansible by {{ ansible_distribution_file_search_string }}</footer>
 </body>
 </html>
